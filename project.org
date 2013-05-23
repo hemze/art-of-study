@@ -2,22 +2,38 @@
 
 ** Plan
 *** Control panel consists of parts for CRUD operations on:
-**** news
+    - Note taken on [2013-05-24 Пт. 01:49] \\
+      cs
+    - Note taken on [2013-05-24 Пт. 01:49] \\
+      test
+
+1. news
      no comments
-**** pages (may include different parts):
+2. pages (may include different parts):
+   1. simple text (marked up)
+      + components:
+        - wysiwyg w file upload ext
+   2. forms
+      + form builder
+        + fields setting
+          + control select
+          + attribs setting
+          + control's addintional handler select
+        + form handler select
+      + future:form styling
+        + scheme select (or/and)
+        + each control styling.
 
-***** simple text (marked)
-***** forms
-***** blocks (see below)
-**** menues
-     top and side (only items w subitems), etc. (depending on design)
-**** blocks
-     different text parts (blocks) of a page
+3. blocks (see below)
 
-*** Site:frontend
+4. menues
+   + top and side (only items w subitems), etc. (depending on design)
 
-**** TODO
+5. blocks
+   + different text parts (blocks) of a page
 
-*** site:backend
+*** TODO site:frontend
 
-**** TODO
+*** TODO site:backend
+
+*** TODO js
