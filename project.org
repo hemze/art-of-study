@@ -1,0 +1,23 @@
+* Art of study Project
+
+** Plan
+*** Control panel consists of parts for CRUD operations on:
+**** news
+     no comments
+**** pages (may include different parts):
+
+***** simple text (marked)
+***** forms
+***** blocks (see below)
+**** menues
+     top and side (only items w subitems), etc. (depending on design)
+**** blocks
+     different text parts (blocks) of a page
+
+*** Site:frontend
+
+**** TODO
+
+*** site:backend
+
+**** TODO
