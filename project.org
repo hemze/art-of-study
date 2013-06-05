@@ -1,39 +1,119 @@
 * Art of study Project
 
-** Plan
-*** Control panel consists of parts for CRUD operations on:
-    - Note taken on [2013-05-24 Пт. 01:49] \\
-      cs
-    - Note taken on [2013-05-24 Пт. 01:49] \\
-      test
-
-1. news
-     no comments
-2. pages (may include different parts):
-   1. simple text (marked up)
-      + components:
-        - wysiwyg w file upload ext
-   2. forms
-      + form builder
-        + fields setting
-          + control select
-          + attribs setting
-          + control's addintional handler select
-        + form handler select
-      + future:form styling
-        + scheme select (or/and)
-        + each control styling.
-
-3. blocks (see below)
-
-4. menues
-   + top and side (only items w subitems), etc. (depending on design)
-
-5. blocks
-   + different text parts (blocks) of a page
-
-*** TODO site:frontend
-
-*** TODO site:backend
+** Control panel
+*** Модель
+   1. DB (3 m/h)
+    1. menu
+       + id
+       + title
+       + href
+       + parent-id
+    2. pages
+       + id
+       + title
+       + mnemonic
+       + text
+       + form
+       + list
+       + in-menu
+    3. forms
+       + id
+       + title
+       + elements (serialized)
+         + form-elements
+             + id
+             + label
+             + type
+             + attribs (serialized)
+    4. users
+       + id
+       + login
+       + pass
+       + role
+       + permissions
+    5. news
+       + id
+       + title
+       + lead
+       + text
+       + publish-date
+       + deferred-publish-date
+       + tags
+   2. CRUD ops (3 m/h )
+      + 1 common class
+        + get-one-record
+        + get-all-records (w paging)
+        + save-record
+        + del-record
+*** Контроль (8 m/h)
+*** Вид (12 m/h)
+ 1. Общий шаблон (2)
+ 2. Шаблон добавления записи (8)
+ 3. Шаблон для списка записей (2)
+*** Описание
+ 1. Состав
+   1. Новости
+     + Состав:
+       - text
+       - lead
+       - title
+       - defferred posting
+       - publish date
+     + Модель
+       - news table
+     + Контроль+Вид
+       - список названий с подгрузкой данных для редактирования.
+       - получение списка новостей
+       - получение одной новости
+       - сохранение данных (новая запись, редактирование)
+   2. Страницы (включают различные части):
+      1. простой текст (marked up)
+         + Состав:
+           - название
+           - текст
+           - мнемоническое имя
+      2. Форма
+         + form-builder
+           + задание элементов
+             + выбор типа
+             + задание атрибутов
+             + выбор/задание клиентского обработчика действий с элементом
+           + выбор обработчика формы
+         + future:form styling
+           + scheme select
+           + (or/and) each control styling.
+      3. blocks (see below)
+      4. Список
+         + список ссылок на дочерние страницы
+   3. menues
+      + Верхнее и боковое.Только состав.
+        + Модель
+          + menu table
+            - TODO: structure
+   4. blocks
+      + different text parts (blocks) of a page
+ 2. Меню
+    + Меню
+      - Создать меню
+      - Список меню
+    + Страницы
+      - Создать страницу
+      - Список страниц
+    + Новости
+      - Создать новость
+      - Список новостей
+    + Блоки (disabled)
+    + Формы
+      - Создать форму
+      - Список форм
+*** site:frontend
+    1. Вид (20 m/h)
+       + общий шаблон (8)
+       + общий шаблон страницы (8)
+       + шаблон формы (4)
+    3. Контроль (24 m/h)
+       + TODO
+    4. Модель (см. Control panel)
 
 *** TODO js
+   +
